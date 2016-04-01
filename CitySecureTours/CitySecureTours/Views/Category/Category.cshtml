@@ -1,0 +1,83 @@
+﻿@model IEnumerable<CityToursMVC.Models.Product>
+
+@{
+    ViewBag.Title = "Category";
+    Layout = "~/Views/_MapLayout.cshtml";
+}
+
+<!-- Content -->
+<!-- Banner -->
+<div class="banner-wrapper">
+    <section id="map">
+        <div id="googleMap"></div>
+    </section>
+    @*<div id="bread-crumb"><span>Home > Tours</span></div>*@
+</div>
+<!-- Banner -->
+
+<div class="container category clearfix">
+
+    <!-- side navigation -->
+    <aside class="left-menu col col-1-5 clearfix" ng-controller="CategoryController as categories">
+        <nav>
+            <div class="top-side-menu">
+                <ul>
+                    <li class="nav-all" data-category="All" ng-click="categories.ShowAll('All')">All tours</li>
+                    <!--<li class="nav-sight">City sightseeing</li>-->
+                    <li class="nav-tour" data-category="Museum" ng-click="categories.FilterByCat('Musuem','Museum');">Museum tours</li>
+                    <li class="nav-build" data-category="Building" ng-click="categories.FilterByCat('Building','Building')">Historics buildings</li>
+                    <!--<li class="nav-walk">Walking tours</li>
+                    <li class="nav-eat">Eat & Drink</li>-->
+                    <li class="nav-chur" data-category="Church" ng-click="categories.FilterByCat('Church', 'Church')">Churches</li>
+                    <!--<li class="nav-sky">Skyline tours</li>
+                    <li class="nav-shop">Shopping tours</li>-->
+                </ul>
+            </div>
+        </nav>
+
+        <div class="filters">
+            <form>
+                <span>Filters</span>
+                <div class="price-filter">
+                    @*<select id="ddlPriceRange" ng-model="priceRange" ng-change="filter.priceRangeChange()">*@
+                    <select id="priceRanger" ng-model="PriceRange" ng-change="categories.FilterByPrice()">
+                        <option value="">-- Select --</option>
+                        <option value="0-49.99"> $0 - $49.99</option>
+                        <option value="50-99.99"> $50 - $99.99</option>
+                        <option value="100-149.99"> $100 - $149.99</option>
+                        <option value="150-199.99"> $150 - $199.99</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+
+        <div class="side-support">
+            <img src="/Images/support_guy.gif" />
+            <span class="help">Need <span class="pink">Help?</span></span>
+            <span class="tel">630 888 2000</span>
+            <span class="hours">Monday though Friday 9:00 AM to 7:30 PM</span>
+        </div>
+    </aside>
+    <!-- side navigation -->
+
+    <div class="tour-list col col-4-5"   ng-controller="DetailController as detail">
+        <div class="pagination col-r">
+            <a href="#" class='page-left'>left</a>
+            <a href="#" class='pag-right'>Right</a>
+        </div> <!--pagination -->
+
+        <section id="categories" class="tour-detail"  ng-controller="CategoryController as categories">
+            <article class="map_tour_info clearfix" ng-repeat="products in categories.featuredTours " data-shownum=""> @*| limitTo : 4*@
+                <featured-category></featured-category>
+            </article>
+        </section>
+
+        <div class="pagination">
+            <a href="#" class='page-left'>left</a>
+            <a href="#" class='pag-right'>Right</a>
+        </div> <!--pagination -->
+    </div>
+</div>
+
+
+<!-- Content -->

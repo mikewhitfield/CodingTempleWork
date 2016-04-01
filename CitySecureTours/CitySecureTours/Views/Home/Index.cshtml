@@ -1,0 +1,76 @@
+﻿
+@model IEnumerable<CityToursMVC.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_CityLayout.cshtml";
+}
+
+
+
+
+<!-- Content -->
+<div class="banner-wrapper">
+    <section>
+        <article class="banner">
+            <div class="dark-bg"></div>
+            <header><h1>Affordable Paris Tours</h1></header><br />
+            <span>City Tours/ City Guides/ City People</span>
+        </article>
+    </section>
+</div>
+
+
+<div class="container" ng-controller="TourController as tours">
+
+    <section class="home clearfix">
+        <header id="heading">
+            <h2>Paris <span class="pink">Top</span> Tours</h2>
+            <span>Quisque at tortor a libero posuere laoreet vitae sed arcu. Curabitur consequat.</span>
+        </header>
+
+        @*<article class="col col-1-3 featured" ng-repeat="products in tours.featuredTours track by $index ">*@
+        <article class="col col-1-3 featured" ng-repeat="products in tours.featuredTours">
+            <featured-product></featured-product>
+        </article>
+    </section>
+
+    <section class="home discover clearfix">
+        <header>
+            <h2>Discover <span class="pink">Tour</span> Options</h2>
+            <span>Quisque at tortor a libero posuere laoreet vitae sed arcu. Curabitur consequat.</span>
+        </header>
+
+        <article class="support col col-1-4 ">
+            <figure><img src="~/Images/support1.jpg" alt="" /></figure>
+            <header>
+                <h4>Historic <span class="pink">Tour</span></h4>
+            </header>
+            <p>Come Enjoy our special tours. They are unique in many ways. Walk the beach, play in the sand - we don't care! Have a good time</p>
+        </article>
+        <article class="support col col-1-4 ">
+            <figure><img src="~/Images/support2.jpg" alt="" /></figure>
+            <header>
+                <h4>Museum <span class="pink">Tour</span></h4>
+            </header>
+            <p>Do whatever you want on our tours. Do sightseeing of just enjoy an popsicle with a loved one. </p>
+        </article>
+        <article class="support col col-1-4 ">
+            <figure><img src="~/Images/support3.jpeg" alt="" /></figure>
+            <header>
+                <h4>Church <span class="pink">Tour</span></h4>
+            </header>
+            <p>Partying is essential to your trip. Come out and have a good time with the night life around the area.</p>
+        </article>
+        <article class="support col col-1-4 ">
+            <figure><img src="~/Images/support4.jpeg" alt="" /></figure>
+            <header>
+                <h4>Special <span class="pink">Tour</span></h4>
+            </header>
+            <p>Paris is a special place! Learn more as our tourguide provides you with in-depth information about wherever you want to go!</p>
+        </article>
+    </section>
+
+</div>
+<!-- Content -->
+

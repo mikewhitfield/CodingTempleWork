@@ -1,0 +1,21 @@
+﻿<figure class="col col-1-4">
+    <img ng-src="{{products.ImageUrl}}" alt="" />
+</figure>
+
+<div class="detail-info col col-1-2">
+    <h3><strong>{{products.Name}}</strong> Tour</h3>
+
+    <p>{{products.Summary | limitTo: 100 }}{{product.Summary.length > 100 ? '...' : ''}}</p>
+    <a href="#" class="tour-map"><span>map icon</span></a>
+    <a href="#" class="tour-clock"><span>clock icon</span></a>
+    <a href="#" class="tour-speakr"><span>speaker icon</span></a>
+    <a href="#" class="tour-train"><span>train icon</span></a>
+    <span class="hidden tour-name">{{products.CatagoryName}}</span>
+</div>
+
+<div class="detail-price col col-1-4">
+    <span class="big-price"><strong>{{products.Price | currency}}</strong></span>
+    <span class="small-price">99</span>
+    <span>*Per Person</span>
+    <a href="/ProductDetails/Details/{{products.Id}}">Details</a>
+</div>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7a0af9ed7d3e414cac45bb099c0f1689" Name="Diagram1" >
+        <EntityTypeShape EntityType="Tours.Address" Width="1.5" PointX="1.5" PointY="12" />
+        <EntityTypeShape EntityType="Tours.Cart" Width="1.5" PointX="3" PointY="0.75" />
+        <EntityTypeShape EntityType="Tours.CartItem" Width="1.5" PointX="5.25" PointY="3.5" />
+        <EntityTypeShape EntityType="Tours.Category" Width="1.5" PointX="0.75" PointY="4.875" />
+        <EntityTypeShape EntityType="Tours.Customer" Width="1.5" PointX="0.75" PointY="8" />
+        <EntityTypeShape EntityType="Tours.Featured" Width="1.5" PointX="5.25" PointY="9.25" />
+        <EntityTypeShape EntityType="Tours.Product" Width="1.5" PointX="3" PointY="3.875" />
+        <EntityTypeShape EntityType="Tours.ProductImage" Width="1.5" PointX="5.25" PointY="6.75" />
+        <EntityTypeShape EntityType="Tours.Role" Width="1.5" PointX="7.75" PointY="2.25" />
+        <EntityTypeShape EntityType="Tours.User" Width="1.5" PointX="3" PointY="16.125" />
+        <EntityTypeShape EntityType="Tours.UserAccount" Width="1.5" PointX="10" PointY="1.75" />
+        <AssociationConnector Association="Tours.FK_Customer_Address" />
+        <AssociationConnector Association="Tours.FK_Cart_Customer" />
+        <AssociationConnector Association="Tours.FK_CartItem_Cart" />
+        <AssociationConnector Association="Tours.FK_CartItem_Product" />
+        <AssociationConnector Association="Tours.FK_Product_Category" />
+        <AssociationConnector Association="Tours.FK_User_Customer" />
+        <AssociationConnector Association="Tours.FK_Featured_Product" />
+        <AssociationConnector Association="Tours.FK_ProductImage_Product" />
+        <AssociationConnector Association="Tours.FK_UserAccount_Role" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

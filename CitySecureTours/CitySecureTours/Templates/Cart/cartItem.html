@@ -1,0 +1,7 @@
+﻿<div class="table-data col col-1-5"><img class="summary-img" ng-src="{{cartItems.ImageUrl}}" /></div>
+<div class="table-data col col-1-5">
+{{cartItems.ProductName}}
+</div>
+<div class="table-data col col-1-5">0%</div>
+<div class="table-data col col-1-5">{{cartItems.Total}}</div>
+<div class="table-data col col-1-5"><img class="icon-trash" src="/Images/trash_can.png" ng-click="CartItem.deleteCart(cartItems.Id); cartCount.minusCounter()" /></div>
