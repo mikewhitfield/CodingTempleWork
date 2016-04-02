@@ -21,7 +21,6 @@
             <div class="col col-1-4 logo"><a href="/Home/Index/"><img src="~/Images/logo_sticky.png" alt="logo" /></a></div>
             <nav class="col col-3-4">
                 <ul class="menu clearfix">
-                    @*<li><a href="~/Home/Index">Home</a></li>*@
                     <li><a href="/Category/Category">Tours</a></li>
                     <li><a href="/Cart/Cart" class="cart-Item">Cart</a><span class="cartItem"></span></li>
                     @{
@@ -30,24 +29,7 @@
                             <li>
                                 <span class="loginName">Hi, @User.Identity.Name</span>
                             </li>
-                           <li class="log"> @Html.ActionLink("Log Out", "LogOff", "Account")                     @{
-                        if (User.Identity.IsAuthenticated)
-                        {
-                            <li>
-                                <span class="loginName">Hi, @User.Identity.Name</span>
-                            </li>
                              <li>@Html.ActionLink("Log Out", "LogOff", "Account")</li>
-                        }
-                        else
-                        {
-                            <li>
-                                <a href="/Account/Login" class="log">Login</a>
-                            </li>
-                            <li>
-                                <a href="/Account/Register" class="reg">Register</a>
-                            </li>
-                        }
-                    }
                         }
                         else
                         {
