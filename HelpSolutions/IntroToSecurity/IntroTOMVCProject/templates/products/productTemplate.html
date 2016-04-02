@@ -1,0 +1,26 @@
+﻿<!--
+   <div>
+    <img ng-src="{{prod.ImageURL}}" class="product-image" />
+</div>
+<div>
+    <label class="product-name">{{prod.ProductName}}</label>
+</div>
+<div>
+    <label class="product-price">{{prod.Price | currency}}</label>
+</div>
+<label class="product-color hidden">{{prod.Color}}</label>
+<label class="product-size hidden">{{prod.ShirtSize}}</label>
+<div class="product-cart"><input type="button" ng-click="store.overviewClick(prod)" value="Overview" /></div>-->
+
+<div>
+    <img ng-src="{{product.ImageUrl}}" class="product-image" />
+</div>
+<div>
+    <label class="product-name">{{product.ProductName}}</label>
+</div>
+<div>
+    <label class="product-price">{{product.Price | currency}}</label>
+</div>
+<label class="product-color hidden">{{product.Color}}</label>
+<label class="product-size hidden">{{product.ShirtSize}}</label>
+<div class="product-cart"><input type="button" ng-click="store.overviewClick(product)" value="Overview" /></div>

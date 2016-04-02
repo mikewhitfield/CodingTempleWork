@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="736b963e8232427d977429e4751dd550" Name="Diagram1" >
+        <EntityTypeShape EntityType="CityTour.Address" Width="1.5" PointX="5.5" PointY="9.125" />
+        <EntityTypeShape EntityType="CityTour.Cart" Width="1.5" PointX="1.75" PointY="3.625" />
+        <EntityTypeShape EntityType="CityTour.CartItem" Width="1.5" PointX="8.5" PointY="3.25" />
+        <EntityTypeShape EntityType="CityTour.Category" Width="1.5" PointX="3.625" PointY="3.625" />
+        <EntityTypeShape EntityType="CityTour.Customer" Width="1.5" PointX="3.25" PointY="9.25" />
+        <EntityTypeShape EntityType="CityTour.Featured" Width="1.5" PointX="7.625" PointY="6.25" />
+        <EntityTypeShape EntityType="CityTour.Product" Width="1.5" PointX="5.5" PointY="2.875" />
+        <EntityTypeShape EntityType="CityTour.ProductImage" Width="1.5" PointX="3.625" PointY="6.125" />
+        <EntityTypeShape EntityType="CityTour.User" Width="1.5" PointX="0.75" PointY="9.25" />
+        <AssociationConnector Association="CityTour.FK_Customer_Address" />
+        <AssociationConnector Association="CityTour.FK_Cart_Customer" />
+        <AssociationConnector Association="CityTour.FK_CartItem_Cart" />
+        <AssociationConnector Association="CityTour.FK_CartItem_Product" />
+        <AssociationConnector Association="CityTour.FK_Product_Category" />
+        <AssociationConnector Association="CityTour.FK_User_Customer" />
+        <AssociationConnector Association="CityTour.FK_Featured_Product" />
+        <AssociationConnector Association="CityTour.FK_ProductImage_Product" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

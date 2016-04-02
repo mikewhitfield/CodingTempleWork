@@ -1,0 +1,76 @@
+﻿
+@model IEnumerable<CityToursMVC.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_CityLayout.cshtml";
+}
+
+
+
+
+<!-- Content -->
+<div class="banner-wrapper">
+    <section>
+        <article class="banner">
+            <div class="dark-bg"></div>
+            <header><h1>Affordable Paris Tours</h1></header><br />
+            <span>City Tours/ City Guides/ City People</span>
+        </article>
+    </section>
+</div>
+
+
+<div class="container" ng-controller="TourController as tours">
+
+    <section class="home clearfix">
+        <header id="heading">
+            <h2>Paris <span class="pink">Top</span> Tours</h2>
+            <span>Quisque at tortor a libero posuere laoreet vitae sed arcu. Curabitur consequat.</span>
+        </header>
+
+        @*<article class="col col-1-3 featured" ng-repeat="products in tours.featuredTours track by $index ">*@
+        <article class="col col-1-3 featured" ng-repeat="products in tours.featuredTours">
+            <featured-product></featured-product>
+        </article>
+    </section>
+
+    <section class="home discover clearfix">
+        <header>
+            <h2>Discover <span class="pink">Tour</span> Options</h2>
+            <span>Quisque at tortor a libero posuere laoreet vitae sed arcu. Curabitur consequat.</span>
+        </header>
+
+        <article class="support col col-1-4 ">
+            <figure><img src="~/Images/support1.jpg" alt="" /></figure>
+            <header>
+                <h4>Special <span class="pink">Tour</span></h4>
+            </header>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non congue tellus. Praesent placerat tempus varius. Phasellus vitae nulla justo. Integer et nisi nulla.</p>
+        </article>
+        <article class="support col col-1-4 ">
+            <figure><img src="~/Images/support2.jpg" alt="" /></figure>
+            <header>
+                <h4>Special <span class="pink">Tour</span></h4>
+            </header>
+            <p>Etiam malesuada nunc mauris, ut pharetra metus blandit a. Phasellus eu elit quis dui finibus efficitur a a risus. </p>
+        </article>
+        <article class="support col col-1-4 ">
+            <figure><img src="~/Images/support3.jpeg" alt="" /></figure>
+            <header>
+                <h4>Special <span class="pink">Tour</span></h4>
+            </header>
+            <p>Integer eu ipsum tincidunt, elementum ex ac, euismod nisl. Proin a tempor eros. Aenean pharetra lorem vitae nulla tincidunt, vitae blandit nisl consectetur.</p>
+        </article>
+        <article class="support col col-1-4 ">
+            <figure><img src="~/Images/support4.jpeg" alt="" /></figure>
+            <header>
+                <h4>Special <span class="pink">Tour</span></h4>
+            </header>
+            <p> Cras nec sodales orci, eget hendrerit enim. Proin accumsan, ante et molestie rutrum, mauris sem interdum urna, nec tempus</p>
+        </article>
+    </section>
+
+</div>
+<!-- Content -->
+

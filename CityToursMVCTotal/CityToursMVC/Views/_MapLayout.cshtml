@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="tour">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/main.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-2.2.1.min.js"></script>
+    <script src="~/Scripts/angular.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD5qvL7PHHUvyuTh96SmVX8idWGDqY4Mr4&sensor=true"></script>
+</head>
+<body ng-controller="CartCountController as cartCount">
+    <script src="~/Scripts/Tour.js"></script>
+    <script src="~/Scripts/directives.js"></script>
+    <script src="~/Scripts/Services.js"></script>
+    <script src="~/Scripts/main.js"></script>
+
+    <!--Header-->
+    <div class="header-wrapper clearfix">
+        <header class="clearfix">
+            <div class="col col-1-4 logo"><a href="/Home/Index/"><img src="~/Images/logo_sticky.png" alt="logo" /></a></div>
+            <nav class="col col-3-4">
+                <ul class="menu clearfix">
+                    @*<li><a href="~/Home/Index">Home</a></li>*@
+                    <li><a href="/Category/Category">Tours</a></li>
+                    <li><a href="/Cart/Cart" class="cart-Item">Cart</a><span class="cartItem"></span></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <!--Header-->
+    <div>
+        @RenderBody()
+    </div>
+    <!-- Footer -->
+    <div class="footer-wrapper">
+        <footer class="clearfix">
+            <article class="col col-1-3">
+                <h5>Need help?</h5>
+                <ul>
+                    <li><a href="#">630-888-1732</a></li>
+                    <li><a href="mailto:">mwhitfieldwork@gmail.com</a></li>
+                </ul>
+            </article>
+            <article class="col col-1-3">
+                <h5>About</h5>
+                <ul>
+                    <li>About Us</li>
+                    <li>FAQ</li>
+                    <li>Register</li>
+                    <li>Terms and conditions</li>
+                </ul>
+            </article>
+            <article class="col col-1-3">
+                <h5>Discover</h5>
+                <ul>
+                    <li>community blog</li>
+                    <li>Tour guide</li>
+                    <li>Wishlist</li>
+                    <li>Gallery</li>
+                </ul>
+            </article>
+            <div><img src="" alt="" /><img src="" alt="" /><img src="" alt="" /><img src="" alt="" /><img src="" alt="" /></div>
+        </footer>
+    </div>
+    <!-- Footer -->
+    <script src="~/Scripts/Cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "ProductDetail";
+    Layout = "~/Views/_CityLayout.cshtml";
+}
+
+    <!-- Content -->
+<div class="banner-wrapper">
+    <section>
+        <article class="banner detail"></article>
+    </section>
+</div>
+
+
+<div class="container details" ng-controller="DetailController as detail">
+    <section class="clearfix">
+        <aside class="col col-1-3">
+            <form action="" method="">
+                <header><h4>Booking</h4></header>
+                <div class="click-form clearfix">
+                    <!-- Adults Clicker-->
+                    <div id="adults" class="clicker col col-1-2 clearfix">
+                        <strong>Adults</strong>
+                        <span class="minus"><a href="#">-</a></span>
+                        <span class="click-num">Num</span>
+                        <span class="plus"><a href="#">+</a></span>
+                    </div>
+
+                    <!-- Kids Clicker-->
+                    <div id="kids" class="clicker col-r col-1-2">
+                        <strong>Chidren</strong>
+                        <span class="minus"><a href="#">-</a></span>
+                        <span class="click-num">Num</span>
+                        <span class="plus"><a href="#">+</a></span>
+                    </div>
+
+                    <div class="display-clicks">
+                        <div class="clearfix click-row adults">
+                            <label class="col">Adults</label><label class="col-r row-total">2</label>
+                        </div>
+                        <div class="clearfix click-row kids">
+                            <label class="col">Children</label><label class="col-r row-total">0</label>
+                        </div>
+                        <div class="clearfix total-cost">
+                            <label class="pink col">Total</label> <label class="pink col-r total">$100</label>
+                        </div>
+                        <div @*ng-controller="CartItemController as CartItem"*@>
+                            <a href="" class="click-btn" ng-click="CartItem.AddToCart(detail.product.Id); cartCount.addCounter()">Book Now</a>
+                            @*<input id="Button1" type="button" value="button" />*@
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="side-support">
+                <img src="~/Images/support_guy.gif" />
+                <span class="help">Book <span class="pink">by phone</span></span>
+                <span class="tel">630 888 2000</span>
+                <span class="hours">Monday though Friday 9:00 AM to 7:30 PM</span>
+            </div>
+
+        </aside>
+
+        <div class="product-detail col col-2-3" >
+            <article class="clearfix">
+
+                <article class="prod-detail-info">
+
+                    <header><h3>{{detail.product.Name}}</h3></header>
+                    <p>{{detail.product.Summary}}</p>
+
+                    <div class="gallery">
+                        <img ng-src="{{detail.product.ImageUrl}}" alt="" class="main-img"/>
+                        <div class="thumbs" ng-repeat="productImage in detail.thumbs"><img ng-src="{{productImage.Url}}" alt="" class="main-img" /></div>
+                    </div>
+
+                </article>
+            </article>
+        </div>
+
+    </section>
+
+</div>
+<!-- Content -->
+

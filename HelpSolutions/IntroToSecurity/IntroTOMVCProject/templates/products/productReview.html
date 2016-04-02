@@ -1,0 +1,22 @@
+﻿<form ng-submit="addReview()" name="reviewFrom">
+    <div>
+        <label> Rating:</label>
+        <select ng-model="review.stars" id="ddlRating">
+            <option value="">Rate product</option>
+            <option value="1">1</option>
+            <option value="1">2</option>
+            <option value="1">3</option>
+            <option value="1">4</option>
+            <option value="1">5</option>
+        </select>
+    </div>
+    <div>
+        <textarea ng-model="review.body" id="txtBody"></textarea>
+    </div>
+    <div>
+        <input ng-model="review.author" id="txtEmail " type="email" />
+    </div>
+    <div>
+        <input id="btnSubmit" type="submit" value="submit" />
+    </div>
+</form>
